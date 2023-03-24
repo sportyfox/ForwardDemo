@@ -1,0 +1,63 @@
+{
+  "name": "Demo.ReusableComponents.SAP",
+  "description": "Library to reuse SAP Components",
+  "main": "NewActivity.xaml",
+  "dependencies": {
+    "UiPath.DocumentUnderstanding.Activities": "2.1.0-beta.3692471",
+    "UiPath.GSuite.Activities": "2.1.1-beta.3695199",
+    "UiPath.OpenAI.IntegrationService.Activities": "5.0.1-preview",
+    "UiPath.System.Activities": "23.4.1-beta.3688279",
+    "UiPath.Testing.Activities": "22.10.3",
+    "UiPath.UIAutomation.Activities": "23.4.1-beta.3689199",
+    "UiPath.WebAPI.Activities": "1.16.1-beta.3666244"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.0.0",
+  "projectVersion": "1.1.4",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "0473d280-0fc8-41e7-969b-ff4488e78d02",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCaseSAPLogin.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Portable"
+}
