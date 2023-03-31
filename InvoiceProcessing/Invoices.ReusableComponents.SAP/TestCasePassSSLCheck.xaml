@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestCasePassSSLCheck" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1114,2146" sap2010:WorkflowViewState.IdRef="TestCasePassSSLCheck_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCasePassSSLCheck" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1114,2186" sap2010:WorkflowViewState.IdRef="TestCasePassSSLCheck_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -86,7 +86,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestCasePassSSLCheck" sap:VirtualizedContainerService.HintSize="1124,2081" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestCasePassSSLCheck" sap:VirtualizedContainerService.HintSize="1124,2121" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="browser" />
     </Sequence.Variables>
@@ -102,13 +102,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="1062,556" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="1062,596" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Privacy error" sap:VirtualizedContainerService.HintSize="484,445" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OutUiElement="[browser]" ScopeGuid="cd06666a-f0ea-415a-a957-99f5a3b38574" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Privacy error" sap:VirtualizedContainerService.HintSize="484,485" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OutUiElement="[browser]" ScopeGuid="cd06666a-f0ea-415a-a957-99f5a3b38574" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -150,7 +150,7 @@
           <InArgument x:TypeArguments="x:Boolean">False</InArgument>
         </Assign.Value>
       </Assign>
-      <uix:NCheckState DisplayName="Check App State 'Exit'" sap:VirtualizedContainerService.HintSize="1000,414" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="3" Version="V3">
+      <uix:NCheckState DisplayName="Check App State 'User menu'" sap:VirtualizedContainerService.HintSize="1000,414" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="3" Version="V3">
         <uix:NCheckState.IfExists>
           <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,197" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
@@ -178,7 +178,7 @@
           </Sequence>
         </uix:NCheckState.IfNotExists>
         <uix:NCheckState.Target>
-          <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="2503, 170, 33, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Exit'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[0]/btn[15]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[0]/btn[15]' tag='DIV' type='' class='lsButton lsButton--base lsTbarBtnStd urInlineMetricTop urNoUserSelect urBtnRadius  urBtnStdValign  lsButton--active  lsButton--hoverable  lsButton--focusable  lsButton--up lsButton--design-transparent ' aaname='' check:innerText='Exit' /&gt;" Guid="71e1754d-d711-4b6c-84d6-74fae0a1530b" InformativeScreenshot="007efae7a3dae5a5e3f61c2c1156411b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access - User Menu for Franky Finance' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+          <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" DesignTimeRectangle="35, 170, 77, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'User menu'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[1]/btn[34]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[1]/btn[34]' tag='DIV' type='' class='lsButton lsButton--base lsTbarBtnStd urInlineMetricTop urNoUserSelect urBtnRadius  urBtnStdValign  lsButton--active  lsButton--hoverable  lsButton--focusable  lsButton--up lsButton--design-transparent ' aaname='' check:innerText='User menu' /&gt;" Guid="27899d98-4620-448a-a0dd-a2f7843c0d43" InformativeScreenshot="4c6a1cf987ebf5a31251778467d43bb2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
         </uix:NCheckState.Target>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
