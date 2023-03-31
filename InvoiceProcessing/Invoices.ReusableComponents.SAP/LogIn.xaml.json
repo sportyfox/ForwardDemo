@@ -26,6 +26,17 @@
       "IsRequired": false,
       "IsPrincipal": true,
       "DataSourceItems": null
+    },
+    {
+      "Name": "_out_Browser",
+      "DisplayName": "Browser",
+      "Category": null,
+      "Tooltip": "Browser parameter to be reused",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
     }
   ]
 }
