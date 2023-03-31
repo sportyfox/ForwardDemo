@@ -6,7 +6,7 @@
   "OriginalIconFileName": null,
   "Arguments": [
     {
-      "Name": "_in_vendorId",
+      "Name": "_in_VendorId",
       "DisplayName": "Vendor Id",
       "Category": null,
       "Tooltip": null,
@@ -17,7 +17,7 @@
       "DataSourceItems": null
     },
     {
-      "Name": "_in_invoiceDate",
+      "Name": "_in_InvoiceDate",
       "DisplayName": "InvoiceDate",
       "Category": null,
       "Tooltip": null,
@@ -28,7 +28,7 @@
       "DataSourceItems": null
     },
     {
-      "Name": "_in_total",
+      "Name": "_in_Total",
       "DisplayName": "Total",
       "Category": null,
       "Tooltip": null,
@@ -39,7 +39,7 @@
       "DataSourceItems": null
     },
     {
-      "Name": "_in_currency",
+      "Name": "_in_Currency",
       "DisplayName": "Currency",
       "Category": null,
       "Tooltip": null,
@@ -50,7 +50,7 @@
       "DataSourceItems": null
     },
     {
-      "Name": "_in_reference",
+      "Name": "_in_Reference",
       "DisplayName": "Reference",
       "Category": null,
       "Tooltip": null,
@@ -61,7 +61,7 @@
       "DataSourceItems": null
     },
     {
-      "Name": "_in_calculateTax",
+      "Name": "_in_CalculateTax",
       "DisplayName": "CalculateTax",
       "Category": null,
       "Tooltip": null,
@@ -72,12 +72,67 @@
       "DataSourceItems": null
     },
     {
-      "Name": "_in_invoices",
+      "Name": "_in_Invoices",
       "DisplayName": "Invoices",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
       "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "_in_Browser",
+      "DisplayName": "_in_Browser",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "_in_ValueDate",
+      "DisplayName": "_in_ValueDate",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "_in_Amount",
+      "DisplayName": "_in_Amount",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "_in_Glacct",
+      "DisplayName": "G/L Acct",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "_in_Summary",
+      "DisplayName": "_in_Summary",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
       "IsRequired": false,
       "IsPrincipal": true,
       "DataSourceItems": null

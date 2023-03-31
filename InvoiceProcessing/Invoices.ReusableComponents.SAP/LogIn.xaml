@@ -2,12 +2,13 @@
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Orchestrator folder where the SAP Credentials are stored" Name="_in_OrchestratorFolder" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Name of the Credential Asset where SAP Credentials are stored" Name="_in_CredentialAssetName" Type="InArgument(x:String)" />
+    <x:Property Name="_out_Browser" Type="OutArgument(ui:UiElement)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000098eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiTG9nIGluIHRvIFNBUCIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>985,1483</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>985,1605</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LogIn_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -99,7 +100,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Log in to SAP" DisplayName="LogIn" sap:VirtualizedContainerService.HintSize="698,1418" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Log in to SAP" DisplayName="LogIn" sap:VirtualizedContainerService.HintSize="698,1540" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="browser" />
       <Variable x:TypeArguments="x:String" Name="Username" />
@@ -128,13 +129,13 @@
         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Logon" sap:VirtualizedContainerService.HintSize="636,1063" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OutUiElement="[browser]" ScopeGuid="897f0446-464c-4312-9668-3ab1e1d82081" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Logon" sap:VirtualizedContainerService.HintSize="636,1185" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OutUiElement="[browser]" ScopeGuid="897f0446-464c-4312-9668-3ab1e1d82081" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,846" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,968" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -263,6 +264,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
+            <Assign sap:VirtualizedContainerService.HintSize="540,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="ui:UiElement">[_out_Browser]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="ui:UiElement">[browser]</InArgument>
+              </Assign.Value>
+            </Assign>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

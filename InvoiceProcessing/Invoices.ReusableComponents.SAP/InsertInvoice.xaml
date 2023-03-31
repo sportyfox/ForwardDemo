@@ -1,22 +1,23 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="InsertInvoice" this:InsertInvoice._in_vendorId="USSU-VSF05" this:InsertInvoice._in_invoiceDate="03/31/2023" this:InsertInvoice._in_total="55" this:InsertInvoice._in_currency="USD" this:InsertInvoice._in_reference="REF" this:InsertInvoice._in_calculateTax="True" this:InsertInvoice._in_glacct="No.5" this:InsertInvoice._in_amount="50" this:InsertInvoice._in_valueDate="03/31/2023" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="InsertInvoice" this:InsertInvoice._in_ValueDate="03/31/2023" this:InsertInvoice._in_Amount="50" this:InsertInvoice._in_Glacct="No.5" this:InsertInvoice._in_CalculateTax="True" this:InsertInvoice._in_Reference="REF" this:InsertInvoice._in_Currency="USD" this:InsertInvoice._in_Total="55" this:InsertInvoice._in_InvoiceDate="03/31/2023" this:InsertInvoice._in_VendorId="USSU-VSF05" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="_in_vendorId" Type="InArgument(x:String)" />
-    <x:Property Name="_in_invoiceDate" Type="InArgument(x:String)" />
-    <x:Property Name="_in_total" Type="InArgument(x:String)" />
-    <x:Property Name="_in_currency" Type="InArgument(x:String)" />
-    <x:Property Name="_in_reference" Type="InArgument(x:String)" />
-    <x:Property Name="_in_calculateTax" Type="InArgument(x:Boolean)" />
-    <x:Property Name="_in_invoices" Type="InArgument(sd:DataTable)" />
-    <x:Property Name="_in_summary" Type="InArgument(x:String)" />
-    <x:Property Name="_in_glacct" Type="InArgument(x:String)" />
-    <x:Property Name="_in_amount" Type="InArgument(x:String)" />
-    <x:Property Name="_in_valueDate" Type="InArgument(x:String)" />
+    <x:Property Name="_in_Browser" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="_in_ValueDate" Type="InArgument(x:String)" />
+    <x:Property Name="_in_Amount" Type="InArgument(x:String)" />
+    <x:Property Name="_in_Glacct" Type="InArgument(x:String)" />
+    <x:Property Name="_in_Summary" Type="InArgument(x:String)" />
+    <x:Property Name="_in_Invoices" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="_in_CalculateTax" Type="InArgument(x:Boolean)" />
+    <x:Property Name="_in_Reference" Type="InArgument(x:String)" />
+    <x:Property Name="_in_Currency" Type="InArgument(x:String)" />
+    <x:Property Name="_in_Total" Type="InArgument(x:String)" />
+    <x:Property Name="_in_InvoiceDate" Type="InArgument(x:String)" />
+    <x:Property Name="_in_VendorId" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1200,3624</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1200,3544</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InsertInvoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,7 +116,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InsertInvoice" sap:VirtualizedContainerService.HintSize="1210,3559" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InsertInvoice" sap:VirtualizedContainerService.HintSize="1210,3479" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="browser" />
     </Sequence.Variables>
@@ -124,7 +125,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Logon" sap:VirtualizedContainerService.HintSize="1148,3448" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[browser]" ScopeGuid="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Logon" sap:VirtualizedContainerService.HintSize="1148,3368" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[_in_Browser]" InteractionMode="DebuggerApi" OutUiElement="[browser]" ScopeGuid="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
