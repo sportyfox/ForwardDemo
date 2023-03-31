@@ -1,0 +1,243 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OpenInvoiceScreen" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Browser" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>536,953</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>OpenInvoiceScreen_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="OpenInvoiceScreen" sap:VirtualizedContainerService.HintSize="546,888" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="484,777" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[Browser]" ScopeGuid="23ccd6d5-f4cc-4a5d-b82d-38b8bdf2d5ad" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,640" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'UCF_BUTTON M0:49::btn[7…'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23ccd6d5-f4cc-4a5d-b82d-38b8bdf2d5ad" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="2359, 170, 26, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'UCF_BUTTON M0:49::btn[7…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[0]/btn[71]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[0]/btn[71]' tag='DIV' type='' class='lsButton lsButton--base lsTbarBtnStd urInlineMetricTop urNoUserSelect urBtnRadius  urBtnStdValign  lsButton--toolbar-image  lsButton--active  lsButton--hoverable  lsButton--focusable  lsButton--up lsButton--design-transparent ' aaname='' /&gt;" Guid="8bbe1be2-8c16-4a3d-9c6e-001dd654a986" InformativeScreenshot="16d46d2752bf62aa7e8d7e9e595912f0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access - User Menu for Franky Finance' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX M1:46:::…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="23ccd6d5-f4cc-4a5d-b82d-38b8bdf2d5ad" Text="FB60" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="1059, 682, 508, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M1:46:::…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[1]/usr/txt130_FIND' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[1]/usr/txt130_FIND' tag='INPUT' type='text' class='lsField__input' aaname='' /&gt;" Guid="ea8d2233-4c56-4a9b-958c-644ae834191d" InformativeScreenshot="cfde6707230f3c315874b98571a4ecf1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access - User Menu for Franky Finance' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Find'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23ccd6d5-f4cc-4a5d-b82d-38b8bdf2d5ad" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="1475, 877, 36, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Find'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[1]/tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[1]/tbar[0]/btn[0]' tag='DIV' type='' class='lsButton lsButton--base lsTbarBtnStd urInlineMetricTop urNoUserSelect urBtnRadius  urBtnStdValign  lsButton--active  lsButton--hoverable  lsButton--focusable  lsButton--up lsButton--design-transparent ' aaname='' check:innerText='Find' /&gt;" Guid="bc7988b1-e123-4128-9726-14aea9476563" InformativeScreenshot="bcba1dc4220f99a0ec19172a8cd51989.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access - User Menu for Franky Finance' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out Manual navigation" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,531" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'SAP menu'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23ccd6d5-f4cc-4a5d-b82d-38b8bdf2d5ad" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="134, 170, 75, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'SAP menu'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[1]/btn[35]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[1]/btn[35]' tag='DIV' type='' class='lsButton lsButton--base lsTbarBtnStd urInlineMetricTop urNoUserSelect urBtnRadius  urBtnStdValign  lsButton--active  lsButton--hoverable  lsButton--focusable  lsButton--up lsButton--design-transparent ' aaname='' check:innerText='SAP menu' /&gt;" Guid="806ab448-fa89-4eaa-8133-ee6a6002e013" InformativeScreenshot="c00ebb6e427b97ec5e28838b0c4c02fc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Double" DisplayName="Click 'Accounting'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23ccd6d5-f4cc-4a5d-b82d-38b8bdf2d5ad" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="94, 375, 68, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Accounting'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#7#1#1#i' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#7#1#1#i' tag='SPAN' type='' class='lsTextView lsTextNoWrapping lsControl--noWrapping lsTextView--usedInTable lsTextView--design-standard ' aaname='Accounting' check:innerText='Accounting' /&gt;" Guid="b31d0128-7414-4779-aa3f-01f25a2e0be7" InformativeScreenshot="eaaabde6f70286a8cb45e2ef17438bdc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Double" DisplayName="Click 'Financial Accounting'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23ccd6d5-f4cc-4a5d-b82d-38b8bdf2d5ad" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="110, 400, 127, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Financial Accounting'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#8#1#1#i' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#8#1#1#i' tag='SPAN' type='' class='lsTextView lsTextNoWrapping lsControl--noWrapping lsTextView--usedInTable lsTextView--design-standard ' aaname='Financial Accounting' check:innerText='Financial Accounting' /&gt;" Guid="ef2710da-49cd-4077-9831-d0976ede47dd" InformativeScreenshot="f3951f93a8fe030620836bedbd10c3e7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Double" DisplayName="Click 'Accounts Payable'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23ccd6d5-f4cc-4a5d-b82d-38b8bdf2d5ad" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="126, 475, 110, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Accounts Payable'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#11#1#1#i' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#11#1#1#i' tag='SPAN' type='' class='lsTextView lsTextNoWrapping lsControl--noWrapping lsTextView--usedInTable lsTextView--design-standard ' aaname='Accounts Payable' check:innerText='Accounts Payable' /&gt;" Guid="59fbb899-3352-4ffd-97b2-3517d9c1f820" InformativeScreenshot="00bab53001ae79f500faa9890bdca080.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Document Entry'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="142, 500, 99, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Document Entry'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#12#1#1#i' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#12#1#1#i' tag='SPAN' type='' class='lsTextView lsTextNoWrapping lsControl--noWrapping lsTextView--usedInTable lsTextView--design-standard ' aaname='Document Entry' check:innerText='Document Entry' /&gt;" Guid="729a4d04-6da9-4ff9-821f-95c0126539fd" InformativeScreenshot="ce9b5c4c6a2377ae88dcc941bf8d9a84.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NClick ClickType="Double" DisplayName="Click 'FB60 - Invoice'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23ccd6d5-f4cc-4a5d-b82d-38b8bdf2d5ad" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="158, 525, 89, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'FB60 - Invoice'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#13#1#1#i' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell' /&gt;&lt;webctrl sapweb-lsid='tree#105#13#1#1#i' tag='SPAN' type='' class='lsTextView lsTextNoWrapping lsControl--noWrapping lsTextView--usedInTable lsTextView--design-standard ' aaname='FB60 - Invoice' check:innerText='FB60 - Invoice' /&gt;" Guid="97d8a783-2cbd-425c-8562-3e98403bbe06" InformativeScreenshot="fb5c9beb86d97f98fa153802d063832e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP Easy Access' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

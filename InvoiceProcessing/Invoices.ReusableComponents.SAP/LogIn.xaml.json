@@ -6,7 +6,7 @@
   "OriginalIconFileName": null,
   "Arguments": [
     {
-      "Name": "OrchestratorFolder",
+      "Name": "_in_OrchestratorFolder",
       "DisplayName": "Orchestrator Folder",
       "Category": null,
       "Tooltip": "Orchestrator folder where the SAP Credentials are stored",
@@ -17,7 +17,7 @@
       "DataSourceItems": null
     },
     {
-      "Name": "CredentialAssetName",
+      "Name": "_in_CredentialAssetName",
       "DisplayName": "Credential Asset Name",
       "Category": null,
       "Tooltip": "Name of the Credential Asset where SAP Credentials are stored",

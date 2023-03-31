@@ -1,4 +1,23 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="InsertInvoice" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="985,581" sap2010:WorkflowViewState.IdRef="InsertInvoice_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="InsertInvoice" this:InsertInvoice._in_vendorId="USSU-VSF05" this:InsertInvoice._in_invoiceDate="03/31/2023" this:InsertInvoice._in_total="55" this:InsertInvoice._in_currency="USD" this:InsertInvoice._in_reference="REF" this:InsertInvoice._in_calculateTax="True" this:InsertInvoice._in_glacct="No.5" this:InsertInvoice._in_amount="50" this:InsertInvoice._in_valueDate="03/31/2023" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="_in_vendorId" Type="InArgument(x:String)" />
+    <x:Property Name="_in_invoiceDate" Type="InArgument(x:String)" />
+    <x:Property Name="_in_total" Type="InArgument(x:String)" />
+    <x:Property Name="_in_currency" Type="InArgument(x:String)" />
+    <x:Property Name="_in_reference" Type="InArgument(x:String)" />
+    <x:Property Name="_in_calculateTax" Type="InArgument(x:Boolean)" />
+    <x:Property Name="_in_invoices" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="_in_summary" Type="InArgument(x:String)" />
+    <x:Property Name="_in_glacct" Type="InArgument(x:String)" />
+    <x:Property Name="_in_amount" Type="InArgument(x:String)" />
+    <x:Property Name="_in_valueDate" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
+  <sap:VirtualizedContainerService.HintSize>1200,3434</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>InsertInvoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -28,6 +47,16 @@
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -56,26 +85,232 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InsertInvoice" sap:VirtualizedContainerService.HintSize="546,433" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InsertInvoice" sap:VirtualizedContainerService.HintSize="1210,3369" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="browser" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Logon" sap:VirtualizedContainerService.HintSize="484,322" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Logon" sap:VirtualizedContainerService.HintSize="1148,3258" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[browser]" ScopeGuid="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1114,3041" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="prompt" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="OpenInvoiceScreen.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1052,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="OpenInvoiceScreen.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="ui:UiElement" x:Key="Browser">[browser]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1052,612" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1016,533" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State 'Tree On'" sap:VirtualizedContainerService.HintSize="954,422" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Timeout="4" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw Exception="[New Exception(&quot;FB60 did not open&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" DesignTimeRectangle="35, 170, 59, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Tree On'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[1]/btn[13]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[1]/btn[13]' tag='DIV' type='' class='lsButton lsButton--base lsTbarBtnStd urInlineMetricTop urNoUserSelect urBtnRadius  urBtnStdValign  lsButton--active  lsButton--hoverable  lsButton--focusable  lsButton--up lsButton--design-transparent ' aaname='' check:innerText='Tree On' /&gt;" Guid="e3dd7732-7849-4697-af22-58099e893a30" InformativeScreenshot="50bbcbe1d74f3b6ab25425f8362d0d78.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX M0:46:1:…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,52" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_vendorId]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" DesignTimeRectangle="187, 296, 178, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:1:…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-ACCNT' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-ACCNT' tag='INPUT' type='text' class='lsField__input' aaname='Account or Matchcode for the Next Line Item' /&gt;" Guid="0fef5eeb-bcfe-4ff9-b802-c575af571d6d" InformativeScreenshot="de4684c2c3e0cb1a7d3a4adc3d4b652b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX M0:46:1:…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,52" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_invoiceDate]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" DesignTimeRectangle="187, 328, 108, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:1:…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-BLDAT' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-BLDAT' tag='INPUT' type='text' class='lsField__input' aaname='Invoice Date in Document' /&gt;" Guid="3f22c345-e858-4776-8e37-e702374c5f17" InformativeScreenshot="1b629fc94f958dd7b6f7f2c199cd3dca.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX M0:46:1:…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,52" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_total]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" DesignTimeRectangle="187, 456, 308, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:1:…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/txtINVFO-WRBTR' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/txtINVFO-WRBTR' tag='INPUT' type='text' class='lsField__input' aaname='Amount in document currency' /&gt;" Guid="c917831b-9894-4d0d-9f75-d4d43c3499fd" InformativeScreenshot="c49e2ae86dfb389cea59dec659c3f524.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX M0:46:1:…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,52" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_currency]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" DesignTimeRectangle="557, 456, 58, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:1:…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-WAERS' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-WAERS' tag='INPUT' type='text' class='lsField__input' aaname='Document Currency' /&gt;" Guid="d4c340e1-1b2d-4bb2-93b3-36052b5a3f81" InformativeScreenshot="77de8608bf93917f21cea2d0f9ae0f4a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX M0:46:1:…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,52" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_reference]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" DesignTimeRectangle="497, 328, 168, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:1:…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/txtINVFO-XBLNR' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/txtINVFO-XBLNR' tag='INPUT' type='text' class='lsField__input' aaname='Reference Document Number' /&gt;" Guid="64ba9bd9-b311-4488-8e0e-e905e9f360ed" InformativeScreenshot="bb6fd5e124b1951cdedd627a93c17efe.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <If Condition="[_in_calculateTax]" sap:VirtualizedContainerService.HintSize="1052,52" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Calculate Tax'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" DesignTimeRectangle="386, 492, 180, 16" DesignTimeScaleFactor="1" FriendlyName="'Calculate Tax'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/chkINVFO-XMWST' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/chkINVFO-XMWST' tag='SPAN' type='' class='lsSelector--generic lsSelector--streched lsSelector--pushedToStart--spacing lsCheckBox--unchecked ' aaname='' check:innerText='Calculate Tax' /&gt;" Guid="16bb4aa1-1973-48d1-a2de-88dd4e618417" InformativeScreenshot="d5b0404037a1cb102f4e685b319b81a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7" />
+              </If.Else>
+            </If>
+            <Assign sap:VirtualizedContainerService.HintSize="1052,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[prompt]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">["Create a single sentence summary that categorises without listing them, the purchase of the following items: "]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX M0:46:1:…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,218" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[prompt]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="187, 552, 458, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:1:…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-SGTXT' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-SGTXT' tag='INPUT' type='text' class='lsField__input' aaname='Item Text' /&gt;" Guid="83d67b02-c41c-4d09-a0e9-9e355b8deade" InformativeScreenshot="a152d7629b93f7dd4c036f015e40abb3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX M0:46:1:…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,218" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_summary]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="187, 552, 458, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:1:…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-SGTXT' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-SGTXT' tag='INPUT' type='text' class='lsField__input' aaname='Item Text' /&gt;" Guid="3b39eae7-170c-4efe-a6a1-f8c3533cdb0b" InformativeScreenshot="a152d7629b93f7dd4c036f015e40abb3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX tbl1010[…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,218" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_glacct]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="90, 769, 105, 24" DesignTimeScaleFactor="1" FriendlyName="'UCF_SUGGESTBOX tbl1010[…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/ctxtACGL_ITEM-HKONT[1,0]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/ctxtACGL_ITEM-HKONT[1,0]' tag='SPAN' type='' class='lsField__input' aaname='' /&gt;" Guid="247a99b6-b3f0-404a-bedf-1c62d9ad68ff" InformativeScreenshot="e64c203849262454f89f6c2f4bfdc1b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NSelectItem DisplayName="Select Item 'Debit'" sap:VirtualizedContainerService.HintSize="1052,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Debit" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="3">
+                  <x:String>Credit</x:String>
+                  <x:String>Debit</x:String>
+                  <x:String xml:space="preserve"> </x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="302, 769, 49, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Debit'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/cmbACGL_ITEM-SHKZG[3,0]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/cmbACGL_ITEM-SHKZG[3,0]' tag='INPUT' type='text' class='lsField__input' aaname='' /&gt;" Guid="d6624736-c1db-4171-9bd2-177eac77cd41" InformativeScreenshot="4a7a45c2004dbc4a7796208a1c379f50.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX tbl1010[…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_amount]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="374, 769, 265, 24" DesignTimeScaleFactor="1" FriendlyName="'UCF_SUGGESTBOX tbl1010[…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/txtACGL_ITEM-WRBTR[4,0]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/txtACGL_ITEM-WRBTR[4,0]' tag='SPAN' type='' class='lsField__input' aaname='' /&gt;" Guid="6c4082f0-3a39-4718-9540-6caf1ca4f281" InformativeScreenshot="013e6d3b7f36f04a39f6c7fa89fbef2f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX tbl1010[…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,218" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_valueDate]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="1300, 769, 105, 24" DesignTimeScaleFactor="1" FriendlyName="'UCF_SUGGESTBOX tbl1010[…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/ctxtACGL_ITEM-VALUT[10,0]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/ctxtACGL_ITEM-VALUT[10,0]' tag='SPAN' type='' class='lsField__input' aaname='' /&gt;" Guid="c3237421-a13b-4394-943c-34318d704063" InformativeScreenshot="6ad60978dffaa224927468590ccfa9b0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

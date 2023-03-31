@@ -3,6 +3,7 @@
   "description": "A set of reusable components for SAP-related automations",
   "main": "NewActivity.xaml",
   "dependencies": {
+    "UiPath.DocumentUnderstanding.Activities": "2.1.1-beta.3719469",
     "UiPath.Excel.Activities": "2.19.0-preview",
     "UiPath.Mail.Activities": "1.18.2",
     "UiPath.System.Activities": "23.4.0-preview",
@@ -37,7 +38,11 @@
     "outputType": "Library",
     "libraryOptions": {
       "includeOriginalXaml": false,
-      "privateWorkflows": []
+      "privateWorkflows": [
+        "HandleSLLEn.xaml",
+        "InsertUserAndPassword.xaml",
+        "OpenInvoiceScreen.xaml"
+      ]
     },
     "processOptions": {
       "ignoredFiles": []
