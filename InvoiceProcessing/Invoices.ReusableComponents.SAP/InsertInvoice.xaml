@@ -16,7 +16,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1200,3434</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1200,3624</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InsertInvoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,7 +115,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InsertInvoice" sap:VirtualizedContainerService.HintSize="1210,3369" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InsertInvoice" sap:VirtualizedContainerService.HintSize="1210,3559" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="browser" />
     </Sequence.Variables>
@@ -124,13 +124,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Logon" sap:VirtualizedContainerService.HintSize="1148,3258" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[browser]" ScopeGuid="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Logon" sap:VirtualizedContainerService.HintSize="1148,3448" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[browser]" ScopeGuid="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1114,3041" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1114,3231" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="prompt" />
             </Sequence.Variables>
@@ -289,18 +289,29 @@
                 <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="90, 769, 105, 24" DesignTimeScaleFactor="1" FriendlyName="'UCF_SUGGESTBOX tbl1010[…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/ctxtACGL_ITEM-HKONT[1,0]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/ctxtACGL_ITEM-HKONT[1,0]' tag='SPAN' type='' class='lsField__input' aaname='' /&gt;" Guid="247a99b6-b3f0-404a-bedf-1c62d9ad68ff" InformativeScreenshot="e64c203849262454f89f6c2f4bfdc1b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NSelectItem DisplayName="Select Item 'Debit'" sap:VirtualizedContainerService.HintSize="1052,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Debit" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V3">
-              <uix:NSelectItem.Items>
-                <scg:List x:TypeArguments="x:String" Capacity="3">
-                  <x:String>Credit</x:String>
-                  <x:String>Debit</x:String>
-                  <x:String xml:space="preserve"> </x:String>
-                </scg:List>
-              </uix:NSelectItem.Items>
-              <uix:NSelectItem.Target>
-                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="302, 769, 49, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Debit'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/cmbACGL_ITEM-SHKZG[3,0]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/cmbACGL_ITEM-SHKZG[3,0]' tag='INPUT' type='text' class='lsField__input' aaname='' /&gt;" Guid="d6624736-c1db-4171-9bd2-177eac77cd41" InformativeScreenshot="4a7a45c2004dbc4a7796208a1c379f50.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NSelectItem.Target>
-            </uix:NSelectItem>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1052,347" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Debit'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Debit" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="3">
+                        <x:String>Credit</x:String>
+                        <x:String>Debit</x:String>
+                        <x:String xml:space="preserve"> </x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="302, 769, 49, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Debit'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/cmbACGL_ITEM-SHKZG[3,0]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/cmbACGL_ITEM-SHKZG[3,0]' tag='INPUT' type='text' class='lsField__input' aaname='' /&gt;" Guid="d6624736-c1db-4171-9bd2-177eac77cd41" InformativeScreenshot="4a7a45c2004dbc4a7796208a1c379f50.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UCF_SUGGESTBOX tbl1010[…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1052,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="6dc750fa-a327-4f73-9bdb-bb8e5ee59321" Text="[_in_amount]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui?sap-client=804&amp;sap-language=EN#" DesignTimeRectangle="374, 769, 265, 24" DesignTimeScaleFactor="1" FriendlyName="'UCF_SUGGESTBOX tbl1010[…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/txtACGL_ITEM-WRBTR[4,0]' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/txtACGL_ITEM-WRBTR[4,0]' tag='SPAN' type='' class='lsField__input' aaname='' /&gt;" Guid="6c4082f0-3a39-4718-9540-6caf1ca4f281" InformativeScreenshot="013e6d3b7f36f04a39f6c7fa89fbef2f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enter Vendor Invoice: Company Code 1710' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
