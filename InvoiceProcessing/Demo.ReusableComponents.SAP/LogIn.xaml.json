@@ -1,0 +1,31 @@
+{
+  "DisplayName": "SAP Log In",
+  "Tooltip": "Log in to SAP",
+  "HelpLink": null,
+  "Color": "#0072FF",
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "OrchestratorFolder",
+      "DisplayName": "Orchestrator Folder",
+      "Category": null,
+      "Tooltip": "Orchestrator folder where the SAP Credentials are stored",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "CredentialAssetName",
+      "DisplayName": "Credential Asset Name",
+      "Category": null,
+      "Tooltip": "Name of the Credential Asset where SAP Credentials are stored",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

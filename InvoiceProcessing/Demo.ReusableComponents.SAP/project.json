@@ -1,21 +1,19 @@
 {
-  "name": "Demo.ReusableComponents.SAP",
-  "description": "Library to reuse SAP Components",
+  "name": "DEMO.ReusableComponents.SAP",
+  "description": "A set of reusable components for SAP-related automations",
   "main": "NewActivity.xaml",
   "dependencies": {
-    "UiPath.DocumentUnderstanding.Activities": "2.1.0-beta.3692471",
-    "UiPath.GSuite.Activities": "2.1.1-beta.3695199",
-    "UiPath.OpenAI.IntegrationService.Activities": "5.0.1-preview",
-    "UiPath.System.Activities": "23.4.1-beta.3688279",
-    "UiPath.Testing.Activities": "22.10.3",
-    "UiPath.UIAutomation.Activities": "23.4.1-beta.3689199",
-    "UiPath.WebAPI.Activities": "1.16.1-beta.3666244"
+    "UiPath.Excel.Activities": "2.19.0-preview",
+    "UiPath.Mail.Activities": "1.18.2",
+    "UiPath.System.Activities": "23.4.0-preview",
+    "UiPath.Testing.Activities": "23.4.0-preview",
+    "UiPath.UIAutomation.Activities": "23.2.0-preview"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.0.0",
-  "projectVersion": "1.1.4",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -47,10 +45,10 @@
     "fileInfoCollection": [
       {
         "editingStatus": "Publishable",
-        "testCaseId": "0473d280-0fc8-41e7-969b-ff4488e78d02",
+        "testCaseId": "3380ad69-c751-4017-a70c-bb4800ef8781",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "TestCaseSAPLogin.xaml"
+        "fileName": "TestCasePassSSLCheck.xaml"
       }
     ],
     "modernBehavior": true
@@ -59,5 +57,5 @@
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Portable"
+  "targetFramework": "Windows"
 }

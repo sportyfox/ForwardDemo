@@ -1,0 +1,13 @@
+{
+  "assemblyStates": {
+    "ExtendedExtractionRe.d58Ae2kkDOS1x4ddu3lX6d84": {
+      "namespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.Invoices.Bundle",
+      "providerName": "CustomEntities",
+      "key": {
+        "name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.Invoices",
+        "hash": "MTM4MTIxMjA4Mw",
+        "assemblyName": "ExtendedExtractionRe.d58Ae2kkDOS1x4ddu3lX6d84"
+      }
+    }
+  }
+}
