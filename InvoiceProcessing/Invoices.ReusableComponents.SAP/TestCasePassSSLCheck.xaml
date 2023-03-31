@@ -108,7 +108,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Privacy error" sap:VirtualizedContainerService.HintSize="484,445" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[browser]" ScopeGuid="cd06666a-f0ea-415a-a957-99f5a3b38574" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Privacy error" sap:VirtualizedContainerService.HintSize="484,445" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OutUiElement="[browser]" ScopeGuid="cd06666a-f0ea-415a-a957-99f5a3b38574" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
