@@ -1,0 +1,73 @@
+{
+  "name": "Acme.ReusableComponents.SAP",
+  "description": "Library to reuse SAP Components",
+  "main": "NewActivity.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "23.4.1-preview",
+    "UiPath.Testing.Activities": "23.4.0-preview",
+    "UiPath.UIAutomation.Activities": "23.4.1-preview"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.0.0",
+  "projectVersion": "1.2.6",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "c469e487-e79e-43f0-a5be-8e3fafcac6db",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\TestCaseLogin.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "61cdb940-ba58-4e5f-ac9d-83a214e8fc76",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\TestCaseCredentialAccess.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "2f75a495-0027-4787-9fe0-791b75aa9624",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\TestCaseCreateReport.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Portable"
+}

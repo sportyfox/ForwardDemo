@@ -1,0 +1,97 @@
+{
+  "DisplayName": "Create Report",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": "#00B7F0",
+  "OriginalIconFileName": "browser-seo-and-web-svgrepo-com.svg",
+  "Arguments": [
+    {
+      "Name": "vendorId",
+      "DisplayName": "Vendor Id",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "invoiceReference",
+      "DisplayName": "Invoice reference",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "invoiceDate",
+      "DisplayName": "Invoice date",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "invoiceAmount",
+      "DisplayName": "Invoice amount",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "invoiceCurrency",
+      "DisplayName": "Invoice currency",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "invoiceDescription",
+      "DisplayName": "Invoice description",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "glAcct",
+      "DisplayName": "GL acct",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": false,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "invoiceDueDate",
+      "DisplayName": "Invoice due date",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": false,
+      "DataSourceItems": null
+    }
+  ]
+}
